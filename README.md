@@ -8,7 +8,7 @@ I still need to figure out how to record the winner out of 5 games
 
 ~~It's a relatively barebones game, and runs under the hood, so you'll need to use DevTools console.~~
 
-### 1/27/2023
+## 1/27/2023
 I'm really proud of this rock-paper-scissors app that I've finally created! Funny thing was I was looking to organize and update some of my repositories,
 until I came upon this one, which was last uploaded/created in Oct 2021. It's Fri Jan 27, 2023... almost 2 years later. My emotions at the time were fear
 of the unknown, imposter syndrome, confusion, discomfort, but, *better late than never, right?*
@@ -26,7 +26,7 @@ follow along.
 ## Troubleshooting
 * I ran into some problems with the computer/player selection displaying "undefined"
 [Here's a resource that helps to clarify that](https://www.codecademy.com/forum_questions/53490c618c1ccc687f00181f)
-* [Stack Overflow solution applied](https://stackoverflow.com/questions/39230557/js-rock-paper-scissor-buttons-instead-of-prompt)
+* [Stack Overflow solution I used for inspiration when adding event listeners](https://stackoverflow.com/questions/39230557/js-rock-paper-scissor-buttons-instead-of-prompt)
 * [Flexbox not centering vertically tl;dr: it's because the height property defaults to auto](https://stackoverflow.com/questions/37223622/flexbox-not-centering-content-vertically)
 
 ## Concepts Applied
