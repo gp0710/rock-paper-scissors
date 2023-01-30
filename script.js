@@ -37,11 +37,13 @@ scissors.addEventListener('click', function() {
 
 })
 
-function playRound(playerSelection, computerSelection) {    
+function playRound(playerSelection, computerSelection) { 
+    computerSelection = getComputerChoice()
     if (playerSelection == "🪨" && computerSelection == "✂️" ||
         playerSelection == "🧻" && computerSelection == "🪨" ||
         playerSelection == "✂️" && computerSelection == "🧻") {
         playerScore++
+        console.log(playerScore)
         results.textContent = `You win! Player: ${playerSelection} Computer: ${computerSelection}`
 
     } else if (playerSelection === computerSelection) {
@@ -54,17 +56,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 /*
+
 function game() {
     //loop through 5 games
     for (let i = 0; i < 5; i++) {
-        playRound(playerSelection, computerSelection) 
-        console.log("Computer:"+computerScore+' 👀 '+'Player:'+playerScore);
+        playRound(playerSelection, computerSelection)
         if (computerScore > playerScore) {
             console.log(`You lose! Computer: ${computerSelection} Player: ${playerSelection}`)
         } else if (computerScore < playerScore) {
             console.log( `You win! Player: ${playerSelection} Computer: ${computerSelection}`)
         } else {
-            console.log(`Both computer and player won same number of rounds, no overall winner, yet. Player selected: ${playerSelection} Computer selected: ${computerSelection}`)
+            console.log(`Both computer and player won same number of rounds, no overall winner, yet. Play again?`)
         }    
     }
 }
