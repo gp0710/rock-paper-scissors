@@ -25,13 +25,13 @@ rock.addEventListener('click', function() {
     playRound(playerSelection, computerSelection)
 })
 
-paper.addEventListener('click', function(e) {
+paper.addEventListener('click', function() {
     playerSelection = "🧻"
     playRound(playerSelection, computerSelection)
 
 })
 
-scissors.addEventListener('click', function(e) {
+scissors.addEventListener('click', function() {
     playerSelection = "✂️"
     playRound(playerSelection, computerSelection)
 
