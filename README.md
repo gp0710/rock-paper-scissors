@@ -3,11 +3,12 @@
 ## Update 1/29
 Things are coming along relatively quickly. I've gotten the UI together for the RPS game, so no need to run Dev Tools to play anymore. 
 
-## Further Development
+### Further Development
 I still need to figure out how to record the winner out of 5 games 
 
 ~~It's a relatively barebones game, and runs under the hood, so you'll need to use DevTools console.~~
 
+### 1/27/2023
 I'm really proud of this rock-paper-scissors app that I've finally created! Funny thing was I was looking to organize and update some of my repositories,
 until I came upon this one, which was last uploaded/created in Oct 2021. It's Fri Jan 27, 2023... almost 2 years later. My emotions at the time were fear
 of the unknown, imposter syndrome, confusion, discomfort, but, *better late than never, right?*
