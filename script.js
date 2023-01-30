@@ -1,4 +1,4 @@
-let choices = ["rock", "paper", "scissors"];
+let choices = ["🪨", "🧻", "✂️"];
 
 function getComputerChoice() {
     //get random choice
@@ -11,76 +11,52 @@ const computerSelection = getComputerChoice()
 let playerScore = 0
 let computerScore = 0
 
-//This code works the same as lines 56-93; I am just experimenting with different 
-// ways of writing the game.
-
-/* 
-function game() {
-    for(let i = 0; i < 5; i++) {
-        const playerSelection = prompt("pick Rock, Paper, or Scissors")
-        function playRound(playerSelection, computerSelection) {
-            let playRock = /\brock\b/i
-            let playPaper = /\bpaper\b/i
-            let playScissors = /\bscissors\b/i
-
-            let rock = playerSelection.match(playRock)
-            let paper = playerSelection.match(playPaper)
-            let scissors = playerSelection.match(playScissors)
-            
-            if (playerSelection == rock && computerSelection == "scissors" ||
-                playerSelection == paper && computerSelection == "rock" ||
-                playerSelection == scissors && computerSelection == "paper") {
-                playerScore++
-                return `You win! ${playerSelection} beats ${computerSelection}`
-            } else if (playerSelection === computerSelection) {
-                return `Tie!`
-            } else {
-                computerScore++
-                return `You lose! ${computerSelection} beats ${playerSelection}`
-            }
-        }
-        playRound(playerSelection, computerSelection)
-        console.log("Computer:"+computerScore+' vs '+'Player:'+playerScore);
-        if (computerScore > playerScore) {
-            console.log("computer wins!")
-        } else {
-            console.log("player wins!")
-        }
-        console.log(computerScore)
-        console.log(playerScore)
-
-    }
-}
-game()
-*/
+const rock = document.querySelector("#rock")
+const paper = document.querySelector("#paper")
+const scissors = document.querySelector("#scissors")
 
 
-function playRound(playerSelection, computerSelection) {
-    let playRock = /\brock\b/i
-    let playPaper = /\bpaper\b/i
-    let playScissors = /\bscissors\b/i
 
-    let rock = playerSelection.match(playRock)
-    let paper = playerSelection.match(playPaper)
-    let scissors = playerSelection.match(playScissors)
-    
-    if (playerSelection == rock && computerSelection == "scissors" ||
-        playerSelection == paper && computerSelection == "rock" ||
-        playerSelection == scissors && computerSelection == "paper") {
+const results = document.querySelector("#results");
+
+
+rock.addEventListener('click', function() {
+    playerSelection = "🪨"
+    playRound(playerSelection, computerSelection)
+})
+
+paper.addEventListener('click', function(e) {
+    playerSelection = "🧻"
+    playRound(playerSelection, computerSelection)
+
+})
+
+scissors.addEventListener('click', function(e) {
+    playerSelection = "✂️"
+    playRound(playerSelection, computerSelection)
+
+})
+
+function playRound(playerSelection, computerSelection) {    
+    if (playerSelection == "🪨" && computerSelection == "✂️" ||
+        playerSelection == "🧻" && computerSelection == "🪨" ||
+        playerSelection == "✂️" && computerSelection == "🧻") {
         playerScore++
-        //return `You win! ${playerSelection} beats ${computerSelection}`
+        results.textContent = `You win! Player: ${playerSelection} Computer: ${computerSelection}`
+
     } else if (playerSelection === computerSelection) {
-        return `Tie!`
+        results.textContent = `Tie! Player: ${playerSelection} Computer: ${computerSelection}`
     } else {
         computerScore++
-        //return `You lose! ${computerSelection} beats ${playerSelection}`
+        results.textContent = `You lose! Player: ${playerSelection} Computer: ${computerSelection}`
+
     }
 }
 
+/*
 function game() {
     //loop through 5 games
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("pick Rock, Paper, or Scissors")
         playRound(playerSelection, computerSelection) 
         console.log("Computer:"+computerScore+' 👀 '+'Player:'+playerScore);
         if (computerScore > playerScore) {
@@ -93,3 +69,5 @@ function game() {
     }
 }
 game()
+
+*/

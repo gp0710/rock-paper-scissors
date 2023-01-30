@@ -3,13 +3,36 @@
 <head>
   <title>Rock Paper Scissors</title>
   <meta charset="utf-8">
-  <!-- <link rel="stylesheet" href="#"> -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Rock Paper Scissors</h1>
-  <h2>Under the hood</h2>
-  <h3>Who will win..?</h3>
-  <p>You'll need your console for this!</p>
+  <div id="container">
+    <div id="content">
+      <h1>Rock Paper Scissors(RPS)</h1>
+      <h2>Human vs Computer</h2>
+      <p id="results">(Who will win..?)</p>
+      <div id="items">
+        <button id="rock">🪨</button>
+        <button id="paper">🧻</button>
+        <button id="scissors">✂️</button>
+      </div>
+
+      <section id="rules">
+        <h3>Rules & Gameplay</h3> 
+        <!-- <p>Winner is whoever wins most rounds out of 5</p> -->
+        <ol>
+          <li>Pick an item: 🪨/🧻/✂️</li>
+          <li>Computer picks an item as well</li>
+          <li>🪨 beats ✂️</li>
+          <li>🧻 beats 🪨 </li>
+          <li>✂️ beats 🧻 </li>
+          <li>It's a tie if items are the same</li>
+        </ol>
+      </section>
+      <h4>Got it..? OK time to play!</h4>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 
